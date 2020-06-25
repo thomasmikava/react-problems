@@ -1,5 +1,11 @@
 ## (CNT) Simple counter
 <details>
+  <summary>CodeSandbox</summary>
+
+https://codesandbox.io/s/cnt-8vpw1?file=/src/App.tsx
+</details>
+
+<details>
   <summary>Statement</summary>
 
 Display two buttons for incrementing and decrementing and value.
@@ -7,11 +13,16 @@ Make it optimized so that on each render you pass exact same onClick functions t
 </details>
 
 ## (ASD) Async displaying
+<details>
+  <summary>CodeSandbox</summary>
+
+https://codesandbox.io/s/asd-23vuf?file=/src/App.tsx
+</details>
 
 <details>
   <summary>Statement</summary>
 
-We have a function that returns a promise
+We are given function `fetchData` that returns a promise of string; Sometimes it resolves, sometimes it rejects.
 ```ts
 const fetchData = (): Promise<string> => {
     return new Promise((resolve, reject) => {
@@ -36,6 +47,12 @@ const fetchData = (): Promise<string> => {
 ## (CNC) Concurrent updates of this.state
 
 <details>
+  <summary>CodeSandbox</summary>
+
+https://codesandbox.io/s/cnc-fyvmu?file=/src/App.tsx
+</details>
+
+<details>
   <summary>Statement</summary>
 
 🔹 Store some number in state with name `counter` and initial value 0.  
@@ -45,14 +62,14 @@ const fetchData = (): Promise<string> => {
 🔹 Make sure that your first method is written correctly so that clicking button will cause incrementing `counter` by two.
 </details>
 <details>
-  <summary>Solution</summary>
+  <summary>Hint</summary>
 
   Since passing new state object to setState does not update this.state synchronously, we can't achive in this way.  
-  instead of passing an object, you can pass function to setState. In this updater function, you are passed most recent value of state and props (though props is irrelevant in this problem). You can return null if you do not want to update state, or partial state for updating it.
+  Instead of passing an object, you can pass function to setState. In this updater function, you are passed most recent value of state and props (though props is irrelevant in this problem). You can return null if you do not want to update state, or partial state for updating it. For instance,
 ```ts
     this.setState((state, props) => {
         return {
-            counter: state.counter + 1,
+            x: state.x - 1,
         };
     });
 ```
