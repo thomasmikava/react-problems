@@ -33,4 +33,27 @@ const fetchData = (): Promise<string> => {
 🔹 If promise is rejected, display custom text on page and a single button. Clicking that button should retry calling fetchData and display loading text too, until promise is fulfilled (either resolved or rejected).
 </details>
 
-## 3. 
+## 3. Concurrent updates of this.state
+
+<details>
+  <summary>Statement</summary>
+
+🔹 Store some number in state with name `counter` and initial value 0.  
+🔹 Write method without any parameters for incrementing `counter` by 1.  
+🔹 Write another method without any parameters that calls first method **synchronously** two times.
+🔹 Render button which calls second method when clicked. Display `counter` too.  
+🔹 Make sure that your first method is written correctly so that clicking button will cause incrementing `counter` by two.
+</details>
+<details>
+  <summary>Solution</summary>
+
+  Since passing new state object to setState does not update this.state synchronously, we can't achive in this way.  
+  instead of passing an object, you can pass function to setState. In this updater function, you are passed most recent value of state and props (though props is irrelevant in this problem). You can return null if you do not want to update state, or partial state for updating it.
+```ts
+    this.setState((state, props) => {
+        return {
+            counter: state.counter + 1,
+        };
+    });
+```
+</details>
