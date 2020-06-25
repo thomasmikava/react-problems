@@ -77,7 +77,7 @@ https://codesandbox.io/s/cnc-fyvmu?file=/src/App.tsx
 
 ## (REF) Mastering Refs
 <details>
-  <summary>Prerequisite</summary>
+  <summary>Prerequisites</summary>
 
 ⚫ Refs: https://reactjs.org/docs/refs-and-the-dom.html (Especially `Adding a Ref to a Class Component` section)
 </details>

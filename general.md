@@ -1,5 +1,11 @@
 ## (MNA.1) Managing arrays
 <details>
+  <summary>CodeSandbox</summary>
+
+https://codesandbox.io/s/mna1-57em4?file=/src/App.tsx
+</details>
+
+<details>
   <summary>Statement</summary>
 
 🔹 Create a parent component and in it's state store array of names (strings). Initial value - `["First", "Second"]`  
@@ -19,6 +25,12 @@ interface ChildProps {
 
 ## (MNA.2) Managing uncontrollable components
 <details>
+  <summary>CodeSandbox</summary>
+
+https://codesandbox.io/s/mna2-ry93s?file=/src/App.tsx
+</details>
+
+<details>
   <summary>Statement</summary>
 
 The problem is same as MNA.1, except:  
@@ -28,6 +40,12 @@ The problem is same as MNA.1, except:
 </details>
 
 ## (MNA.3) Managing arrays of more general child components
+<details>
+  <summary>CodeSandbox</summary>
+
+https://codesandbox.io/s/mna3-2j0xl?file=/src/App.tsx
+</details>
+
 <details>
   <summary>Statement</summary>
 
