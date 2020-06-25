@@ -13,7 +13,6 @@ function generateProblemCode() {
 
 function generateCode(length) {
     let mask = "";
-	mask += "abcdefghijklmnopqrstuvwxyz";
     mask += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     let result = "";

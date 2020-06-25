@@ -57,3 +57,28 @@ const fetchData = (): Promise<string> => {
     });
 ```
 </details>
+
+## (REF) Mastering Refs
+<details>
+  <summary>Prerequisite</summary>
+
+⚫ Refs: https://reactjs.org/docs/refs-and-the-dom.html (Especially `Adding a Ref to a Class Component` section)
+</details>
+
+<details>
+  <summary>CodeSandbox</summary>
+
+https://codesandbox.io/s/ref-7twer?file=/src/App.tsx
+</details>
+
+<details>
+  <summary>Statement</summary>
+
+You are given uncontrollable child component.  
+Parent component stores number of counters and renders that amount of child components. It has two buttons `Add counter` and `Increment all counters`.
+
+🔸 You are not allowed to edit child component.  
+
+🔹 Implement incrementCounters so that it increments counters of all child components that are rendered.
+
+</details>
