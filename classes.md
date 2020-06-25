@@ -1,12 +1,12 @@
-## 1. Simple counter
+## (CNT) Simple counter
 <details>
   <summary>Statement</summary>
 
 Display two buttons for incrementing and decrementing and value.
-Make it optimized so that on each render you pass exact same onlick functions to each button (not necessarily same function to both buttons)
+Make it optimized so that on each render you pass exact same onClick functions to each button (not necessarily same function to both buttons)
 </details>
 
-## 2. Async displaying
+## (ASD) Async displaying
 
 <details>
   <summary>Statement</summary>
@@ -33,14 +33,14 @@ const fetchData = (): Promise<string> => {
 🔹 If promise is rejected, display custom text on page and a single button. Clicking that button should retry calling fetchData and display loading text too, until promise is fulfilled (either resolved or rejected).
 </details>
 
-## 3. Concurrent updates of this.state
+## (CNC) Concurrent updates of this.state
 
 <details>
   <summary>Statement</summary>
 
 🔹 Store some number in state with name `counter` and initial value 0.  
 🔹 Write method without any parameters for incrementing `counter` by 1.  
-🔹 Write another method without any parameters that calls first method **synchronously** two times.
+🔹 Write another method without any parameters that calls first method **synchronously** two times.  
 🔹 Render button which calls second method when clicked. Display `counter` too.  
 🔹 Make sure that your first method is written correctly so that clicking button will cause incrementing `counter` by two.
 </details>

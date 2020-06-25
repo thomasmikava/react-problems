@@ -1,4 +1,4 @@
-## 1.1 Managing arrays
+## (MNA.1) Managing arrays
 <details>
   <summary>Statement</summary>
 
@@ -17,21 +17,21 @@ interface ChildProps {
 🔹 Make sure that changing value of single name rerenders only parent and corresponding child compoonent 
 </details>
 
-## 1.2 Managing uncontrollable components
+## (MNA.2) Managing uncontrollable components
 <details>
   <summary>Statement</summary>
 
-The problem is same as 1.1, except:
+The problem is same as MNA.1, except:  
 🔹 Use uncontrollable input in child component. That is, instead of passing value to input, pass defaultValue.  
 🔹 Notice the bug when deleting non-last child component.  
 🔹 Resolve the bug. You are not allowed to change the types of ChildProps or names (string[]). However, you are free to introduce new states (or properties in state in case of class components).
 </details>
 
-## 1.3 Managing arrays 2
+## (MNA.3) Managing arrays of more general child components
 <details>
   <summary>Statement</summary>
 
-The problem is same as 1.1, except:
+The problem is same as MNA.1, except:  
 🔹 the props of child component. The new type should be
 ```ts
 interface ChildProps {
@@ -41,5 +41,5 @@ interface ChildProps {
 }
 ```
 🔹 Try achieving desired results without considreng optimization of rerendering only appropriate components.  
-🔹 Finally, try achieving desired result with optimizing rerendering as described in 1.1.
+🔹 Finally, try achieving desired result with optimizing rerendering as described in MNA.1.
 </details>
