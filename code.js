@@ -1,5 +1,5 @@
 
-const existingProblemCodes = new Set(["CNT", "ASD", "CNC", "MNA", "REF"]);
+const existingProblemCodes = new Set(["CNT", "ASD", "CNC", "MNA", "REF", "UST", "USR", "USC", "USM"]);
 
 function generateProblemCode() {
     do {
