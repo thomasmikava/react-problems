@@ -9,7 +9,7 @@ Be sure to know:
 
 
 
-## (USC) useCallback
+## (USC.1) useCallback
 <!-- <details>
   <summary>CodeSandbox</summary>
 
@@ -19,7 +19,26 @@ Be sure to know:
 <details>
   <summary>Statement</summary>
 
-Write custom hook wihtout using `useCallback` which behaves exactly like `useCallback`.
+Write custom hook without using `useCallback` which behaves exactly like `useCallback`.
+</details>
+
+
+## (USC.2) useCallback
+<!-- <details>
+  <summary>CodeSandbox</summary>
+
+
+</details> -->
+
+<details>
+  <summary>Statement</summary>
+
+Write custom hook that accepts a function `fn` and:  
+🔹 Returns a function `outFn`, which guaranteedly is not changed on re-renders  
+🔹 `outFn` should behave exactly like `fn`  
+
+
+In other words, you are required to write custom hook similar to `useCallback` which does not need dependencies array and has same (or even better) performance benefits.
 </details>
 
 
@@ -33,10 +52,25 @@ Write custom hook wihtout using `useCallback` which behaves exactly like `useCal
 <details>
   <summary>Statement</summary>
 
-Write custom hook wihtout using `useState` which behaves exactly like `useState`.
+Write custom hook without using `useState` nor `useReducer` which behaves exactly like `useState`.
 Be sure that:  
-🔹 It can accept default value as well as function which returns default value  
-🔹 Second element of returned array can accept new value as well as function that receives old value and returns new value 
+🔹 It can accept default value as well as a function which returns default value  
+🔹 Second element of returned array (`setState`) can accept new value as well as function that receives old value and returns new value 
+🔹 Make sure that `setState` stays the same function and is not changed on re-renders
+</details>
+
+
+<details>
+  <summary>Hint</summary>
+
+We provide `useForceUpdate` custom hook as a helper for re-rendering.
+
+```ts
+const useForceUpdate = () => {
+    const [, forceUpdate] = useReducer(x => x + 1, 0);
+    return forceUpdate;
+}
+```
 </details>
 
 
@@ -50,7 +84,7 @@ Be sure that:
 <details>
   <summary>Statement</summary>
 
-Write custom hook wihtout using `useRef` which behaves exactly like `useRef`.
+Write custom hook without using `useRef` which behaves exactly like `useRef`.
 </details>
 
 
@@ -64,7 +98,7 @@ Write custom hook wihtout using `useRef` which behaves exactly like `useRef`.
 <details>
   <summary>Statement</summary>
 
-Write custom hook wihtout using neither `useMemo` nor `useCallback` which behaves exactly like `useMemo`.
+Write custom hook without using neither `useMemo` nor `useCallback` which behaves exactly like `useMemo`.
 </details>
 
 ## (USM.2) Simple useMemo
@@ -78,7 +112,8 @@ Write custom hook wihtout using neither `useMemo` nor `useCallback` which behave
   <summary>Statement</summary>
 
 Write higher order function which:  
-🔹 Accepts function `compareFn` as a parameter. compareFn itselft accepts two arrays as parameters and returns boolean - whether every element of arrays on same indixes are equal or not. It can use simple shallow equality, deep equality or even custom. The implementation of `compareFn` is not imporant for us anyway.  
+🔹 Accepts function `compareFn` as a sole parameter.  
+  `compareFn` itselft accepts two arrays as parameters and returns a boolean - whether every element of arrays on same indixes are equal or not. It can use simple shallow equality, deep equality or even custom. The implementation of `compareFn` is not imporant for us anyway.  
 🔹 Returns custom hook which behaves like `useMemo` with the difference that the equality of old and new dependencies must be checked by `compareFn` function.  
-🔹 Does not use `useMemo`
+🔹 Does not use neither `useMemo` nor `useCallback`
 </details>
