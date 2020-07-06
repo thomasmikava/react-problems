@@ -53,11 +53,12 @@ https://codesandbox.io/s/ust-u1e00?file=/src/hook.ts
 <details>
   <summary>Statement</summary>
 
-Write custom hook without using `useState` nor `useReducer` which behaves exactly like `useState`.
+Write custom hook without using `useState` which behaves exactly like `useState`.
 Be sure that:  
 🔹 It can accept default value as well as a function which returns default value  
 🔹 Second element of returned array (`setState`) can accept new value as well as function that receives old value and returns new value 
-🔹 Make sure that `setState` stays the same function and is not changed on re-renders
+🔹 Make sure that `setState` stays the same function and is not changed on re-renders  
+🔸 You can use `useReducer` hook only for re-rendering purpose
 </details>
 
 
@@ -76,11 +77,11 @@ const useForceUpdate = () => {
 
 
 ## (USR) useRef
-<!-- <details>
+<details>
   <summary>CodeSandbox</summary>
 
-
-</details> -->
+https://codesandbox.io/s/usr-oi6i4?file=/src/hook.ts
+</details>
 
 <details>
   <summary>Statement</summary>
@@ -90,11 +91,11 @@ Write custom hook without using `useRef` which behaves exactly like `useRef`.
 
 
 ## (USM.1) Simple useMemo
-<!-- <details>
+<details>
   <summary>CodeSandbox</summary>
 
-
-</details> -->
+https://codesandbox.io/s/usm1-n3emx?file=/src/hook.ts
+</details>
 
 <details>
   <summary>Statement</summary>
@@ -103,11 +104,11 @@ Write custom hook without using neither `useMemo` nor `useCallback` which behave
 </details>
 
 ## (USM.2) Simple useMemo
-<!-- <details>
+<details>
   <summary>CodeSandbox</summary>
 
-
-</details> -->
+https://codesandbox.io/s/usm2-j5m2e?file=/src/hook.ts
+</details>
 
 <details>
   <summary>Statement</summary>
