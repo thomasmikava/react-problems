@@ -10,11 +10,11 @@ Be sure to know:
 
 
 ## (USC.1) useCallback
-<!-- <details>
+<details>
   <summary>CodeSandbox</summary>
 
-
-</details> -->
+https://codesandbox.io/s/usc1-8gg34?file=/src/hook.ts
+</details>
 
 <details>
   <summary>Statement</summary>
@@ -24,11 +24,11 @@ Write custom hook without using `useCallback` which behaves exactly like `useCal
 
 
 ## (USC.2) useCallback
-<!-- <details>
+<details>
   <summary>CodeSandbox</summary>
 
-
-</details> -->
+https://codesandbox.io/s/usc2-892uq?file=/src/hook.ts
+</details>
 
 <details>
   <summary>Statement</summary>
@@ -36,6 +36,7 @@ Write custom hook without using `useCallback` which behaves exactly like `useCal
 Write custom hook that accepts a function `fn` and:  
 🔹 Returns a function `outFn`, which guaranteedly is not changed on re-renders  
 🔹 `outFn` should behave exactly like `fn`  
+🔸 Do not use `useCallback` hook
 
 
 In other words, you are required to write custom hook similar to `useCallback` which does not need dependencies array and has same (or even better) performance benefits.
@@ -43,11 +44,11 @@ In other words, you are required to write custom hook similar to `useCallback` w
 
 
 ## (UST) useState
-<!-- <details>
+<details>
   <summary>CodeSandbox</summary>
 
-
-</details> -->
+https://codesandbox.io/s/ust-u1e00?file=/src/hook.ts
+</details>
 
 <details>
   <summary>Statement</summary>
