@@ -35,7 +35,7 @@ https://codesandbox.io/s/usc2-892uq?file=/src/hook.ts
 
 Write custom hook that accepts a function `fn` and:  
 🔹 Returns a function `outFn`, which guaranteedly is not changed on re-renders  
-🔹 `outFn` should behave exactly like `fn`  
+🔹 `outFn` should behave exactly like latest `fn`  
 🔸 Do not use `useCallback` hook
 
 
