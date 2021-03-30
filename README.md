@@ -7,3 +7,4 @@
 
 [General problems and exercises suited for both react class and functional components](general.md)
 
+[Refactoring exercises](refactoring.md)
