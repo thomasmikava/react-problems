@@ -8,7 +8,7 @@ https://codesandbox.io/s/cnt-8vpw1?file=/src/App.tsx
 <details>
   <summary>Statement</summary>
 
-Display two buttons for incrementing and decrementing and value.
+Display two buttons for incrementing and decrementing the value.
 Make it optimized so that on each render you pass exact same onClick functions to each button (not necessarily same function to both buttons)
 </details>
 
