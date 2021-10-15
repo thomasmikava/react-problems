@@ -64,7 +64,7 @@ https://codesandbox.io/s/cnc-fyvmu?file=/src/App.tsx
 <details>
   <summary>Hint</summary>
 
-  Since passing new state object to setState does not update this.state synchronously, we can't achive in this way.  
+  Since passing new state object to setState does not update this.state synchronously, we can't achieve in this way.  
   Instead of passing an object, you can pass function to setState. In this updater function, you are passed most recent value of state and props (though props is irrelevant in this problem). You can return null if you do not want to update state, or partial state for updating it. For instance,
 ```ts
     this.setState((state, props) => {

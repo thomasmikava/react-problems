@@ -8,7 +8,7 @@ https://codesandbox.io/s/mna1-57em4?file=/src/App.tsx
 <details>
   <summary>Statement</summary>
 
-🔹 Create a parent component and in it's state store array of names (strings). Initial value - `["First", "Second"]`  
+🔹 Create a parent component and in its state store the array of names (strings). Initial value - `["First", "Second"]`  
 🔹 Create a child component with the following props
 ```ts
 interface ChildProps {
@@ -18,9 +18,9 @@ interface ChildProps {
     onDelete: (index: number) => void;
 }
 ```
-🔹 Parent component should render child comomponents (each child component responsible for rendering one name) and a button, which, when clicked, will add new name at the end. It should pass required props to child components and the passed functions must behave as their names suggest.  
-🔹 Child component should render controllable input with exlicit value passed from parent. Changing input value must call `onChange` function (received from props) with appropriate arguments. Render button for deleting too.  
-🔹 Make sure that changing value of single name rerenders only parent and corresponding child compoonent 
+🔹 Parent component should render child components (each child component responsible for rendering one name) and a button, which, when clicked, will add new name at the end. It should pass required props to child components and the passed functions must behave as their names suggest.  
+🔹 Child component should render controllable input with explicit value passed from parent. Changing input value must call `onChange` function (received from props) with appropriate arguments. Render button for deleting too.  
+🔹 Make sure that changing value of single name rerenders only parent and corresponding child component 
 </details>
 
 ## (MNA.2) Managing uncontrollable components
@@ -58,6 +58,6 @@ interface ChildProps {
     onDelete: () => void;
 }
 ```
-🔹 Try achieving desired results without considreng optimization of rerendering only appropriate components.  
+🔹 Try achieving the desired results *without* considering the optimization (of rerendering only the appropriate components).  
 🔹 Finally, try achieving desired result with optimizing rerendering as described in MNA.1.
 </details>
